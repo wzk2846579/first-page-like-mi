@@ -1,0 +1,29 @@
+/* 公共样式 */
+
+/* 用于解决父子元素垂直方向外边距重叠问题以及高度塌陷问题 */
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+body {
+    font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color: #333;
+    min-width: 1226px;
+}
+
+/* 去除a的下划线 */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/*设置一个类，用来表示中间容器的宽度*/
+.w {
+    /* 固定容器的宽度 */
+    width: 1226px;
+    /* 设置容器居中 */
+    margin: 0 auto;
+}
