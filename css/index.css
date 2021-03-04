@@ -47,6 +47,7 @@
     text-align: center;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    z-index: 9999;
     /* display: none; */
 }
 
@@ -349,4 +350,103 @@ ul.left-menu li a:hover {
 
 .prev-next .next:hover {
     background-position: -42px 0;
+}
+
+/*
+    布局的等式
+        left + margin-left + width + margin-right + right = 视口宽度
+        auto + 0 + 26 + (-639) + 50% = 视口宽度
+*/
+.back-top {
+    width: 26px;
+    height: 206px;
+    background-color: orange;
+    position: fixed;
+    bottom: 60px;
+    right: 50%; /*将right值设置为视口宽度的50%*/
+    margin-right: -639px;
+}
+
+/* 设置下部的广告区 */
+.ad {
+    height: 170px;
+    margin-top: 14px;
+}
+
+.ad .shortcut,
+.ad .ad-imgs,
+.ad li {
+    float: left;
+}
+
+.ad .shortcut {
+    width: 228px;
+    height: 168px;
+    background-color: #5f5750;
+    margin-right: 14px;
+    padding-top: 2px;
+    padding-left: 6px;
+}
+
+.ad .shortcut li {
+    position: relative;
+}
+
+.ad .shortcut li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 64px;
+    height: 1px;
+    background-color: #665e57;
+}
+
+.ad .shortcut li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 1px;
+    height: 70px;
+    background-color: #665e57;
+}
+
+.ad .shortcut a:hover {
+    color: #fff;
+}
+
+.ad .shortcut a {
+    display: block;
+    color: #cfccca;
+    height: 84px;
+    width: 76px;
+    text-align: center;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.ad .shortcut i {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    font-size: 20px;
+}
+
+.ad .ad-imgs li {
+    width: 316px;
+    margin-right: 15px;
+}
+
+.ad .ad-imgs li:last-child {
+    margin-right: 0;
+}
+
+.ad .ad-imgs img {
+    width: 100%;
+    vertical-align: top;
 }
